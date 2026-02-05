@@ -16,13 +16,12 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
-    // GET all books
+
     @GetMapping
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
 
-    // POST add book
     @PostMapping
     public Book addBook(@RequestBody Book book) {
         return bookRepository.save(book);
